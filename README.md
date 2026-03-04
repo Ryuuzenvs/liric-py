@@ -24,7 +24,7 @@ Kamu bisa memodifikasi script ini agar sesuai dengan lagu lain atau preferensi t
 | Variabel | Fungsi | Cara Ubah |
 | :--- | :--- | :--- |
 | `def_sleep` | Jeda awal sebelum script mulai berjalan. | Ubah nilainya (misal `2` untuk menunggu 2 detik). |
-| `typing_speed` | Kecepatan munculnya setiap huruf. | Semakin kecil angkanya, semakin cepat ketikannya (contoh: `0.05`). |
+| `default_typing_speed` | KKecepatan ketik standar jika tidak ditentukan di baris lirik. (contoh: `0.05`). |
 
 ### 2. Mengubah Lirik & Durasi (`lines`)
 Bagian `lines` adalah sebuah **Array (List)** yang berisi teks lirik dan durasi jeda setelah baris tersebut selesai diketik.
@@ -33,7 +33,13 @@ Bagian `lines` adalah sebuah **Array (List)** yang berisi teks lirik dan durasi 
 
 ```python
 lines = [
-    ("Lirik baris pertama", 0.5), # Muncul, lalu diam 0.5 detik
-    ("Lirik baris kedua", 1.2),   # Muncul, lalu diam 1.2 detik
+    # Contoh: Lirik normal dengan speed default
+    ("No one's gotta know", 0.5, 0.08), 
+    
+    # Contoh: Lirik yang diucapkan sangat cepat (nge-rap/fast beat)
+    ("Low, low, low, lowkey", 0.3, 0.04), 
+    
+    # Contoh: Lirik yang diucapkan lambat/dramatis
+    ("Till the sun starts waking", 1.2, 0.2),
 ]
 
