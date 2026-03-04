@@ -1,45 +1,52 @@
 # 🎵 Python Lyrics Player
 
-Sebuah script Python sederhana untuk menampilkan lirik lagu  dengan efek *typing* (mengetik) secara real-time di terminal.
+Sebuah script Python sederhana untuk menampilkan lirik lagu favoritmu dengan efek *typing* (mengetik) yang sinkron secara real-time di terminal.
 
-## ✨ Fitur
-- **Typewriter Effect**: Teks muncul per huruf, bukan per baris.
-- **Dynamic Timing**: Jeda antar baris disesuaikan dengan ritme lagu.
-- **Lightweight**: Tanpa library eksternal, cukup pakai bawaan Python.
+---
+
+## ✨ Fitur Utama
+
+*   **⌨️ Typewriter Effect**: Teks muncul per karakter, memberikan kesan visual yang lebih hidup.
+*   **⏱️ Precise Timing**: Kontrol penuh atas jeda antar baris dan kecepatan ketik setiap kalimat.
+*   **🪶 Ultra Lightweight**: Hanya menggunakan modul bawaan Python (`sys`, `time`). Tidak perlu `pip install`.
+*   **🎨 Highly Customizable**: Mudah diubah untuk lagu apa pun hanya dengan mengedit struktur list.
+
+---
 
 ## 🚀 Cara Menjalankan
 
-1. Pastikan kamu sudah menginstal [Python](https://www.python.org).
-2. Clone repository ini atau simpan kode ke dalam file `.py`.
-3. Jalankan perintah berikut di terminal:
-   ```bash
-   python nama_file_kamu.py
+1.  **Instalasi Python**: Pastikan Python (versi 3.6+) sudah terpasang di sistem kamu.
+2.  **Simpan File**: Simpan kode Python kamu dengan nama, misalnya `lyrics.py`.
+3.  **Eksekusi**: Buka terminal atau CMD, lalu jalankan:
+    ```bash
+    python lyrics.py
+    ```
+
+---
 
 ## ⚙️ Konfigurasi & Kustomisasi
 
-Kamu bisa memodifikasi script ini agar sesuai dengan lagu lain atau preferensi tampilanmu. Semua pengaturan ada di dalam fungsi `run_liric()` pada bagian `#config`:
+Kamu bisa memodifikasi skrip ini di dalam fungsi `run_liric()` pada bagian variabel `lines`.
 
-### 1. Mengatur Kecepatan & Jeda
-
-| Variabel | Fungsi | Cara Ubah |
-| :--- | :--- | :--- |
-| `def_sleep` | Jeda awal sebelum script mulai berjalan. | Ubah nilainya (misal `2` untuk menunggu 2 detik). |
-| `default_typing_speed` | KKecepatan ketik standar jika tidak ditentukan di baris lirik. (contoh: `0.05`). |
-
-### 2. Mengubah Lirik & Durasi (`lines`)
-Bagian `lines` adalah sebuah **Array (List)** yang berisi teks lirik dan durasi jeda setelah baris tersebut selesai diketik.
-
-**Format:** `("Teks Lirik", Jeda_Detik)`
+### 1. Struktur Baris Lirik
+Format penulisan lirik menggunakan *tuple* di dalam *list*:
+`("Teks Lirik", Jeda_Setelah_Baris, Kecepatan_Ketik)`
 
 ```python
 lines = [
-    # Contoh: Lirik normal dengan speed default
+    # Contoh: Lirik normal
     ("No one's gotta know", 0.5, 0.08), 
     
-    # Contoh: Lirik yang diucapkan sangat cepat (nge-rap/fast beat)
+    # Contoh: Lirik cepat (beat cepat/rap)
     ("Low, low, low, lowkey", 0.3, 0.04), 
     
-    # Contoh: Lirik yang diucapkan lambat/dramatis
+    # Contoh: Lirik lambat (dramatis/vibrato lama)
     ("Till the sun starts waking", 1.2, 0.2),
 ]
 
+
+### 2. Parameter Detail
+Parameter	Deskripsi	Rekomendasi
+Teks Lirik	Kalimat yang akan ditampilkan.	Gunakan \n untuk baris baru manual.
+Jeda Baris	Waktu tunggu (detik) sebelum lanjut ke baris berikutnya.	0.5 - 2.0 detik.
+Speed Type	Jeda antar karakter (detik). Semakin kecil, semakin cepat.	0.05 (Cepat), 0.1 (Sedang), 0.2 (Lambat).
