@@ -3,3 +3,5 @@ python3 filename.py
 python3 linehook.py
 
 python3 DragPath.py
+
+python3 BeautyandaBeat.py
