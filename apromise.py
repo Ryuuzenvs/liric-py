@@ -3,7 +3,8 @@ import time
 
 def run_liric():
     #config
-    typing_speed = 0.35
+    def_sleep = 0 #default sleep time = 0
+    typing_speed = 0.35 #type speed in terminal
     lines = [
 #        ("話したいことがたくさんあるよ", 0.5),
 #        ("どんな話でも聞きたいよ", 0.5),
@@ -15,7 +16,7 @@ def run_liric():
     ]
 
     print("--- A Promise (Aira Yuuki) ---\n")
-    time.sleep(0) 
+    time.sleep(def_sleep) 
 
     for baris, delay in lines:
         

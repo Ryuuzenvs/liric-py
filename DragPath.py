@@ -3,7 +3,8 @@ import time
 
 def run_liric():
     #config
-    typing_speed = 0.12
+    def_sleep = 0.5 #default sleep time = 0
+    typing_speed = 0.12 #type speed in terminal
     lines = [
         ("Can you, can you, can you, can you?", 1),
         ("A drag path", 0.5),
@@ -16,7 +17,7 @@ def run_liric():
     ]
 
     print("--- Drag path ---\n")
-    time.sleep(0.5) 
+    time.sleep(def_sleep) 
 
     for baris, delay in lines:
         

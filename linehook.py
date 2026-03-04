@@ -3,7 +3,8 @@ import time
 
 def run_liric():
     #config
-    typing_speed = 0.08 
+    def_sleep = 0.5 #default sleep time = 0
+    typing_speed = 0.08 #type speed in terminal
     lines = [
         ("Is it worth it?", 0.5),
         ("Is it worth it?", 0.5),
@@ -15,7 +16,7 @@ def run_liric():
     ]
 
     print("--- Line without a hook ---\n")
-    time.sleep(0.5) 
+    time.sleep(def_sleep) 
 
     for baris, delay in lines:
         

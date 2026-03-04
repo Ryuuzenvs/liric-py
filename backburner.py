@@ -3,7 +3,8 @@ import time
 
 def run_liric():
     #config
-    typing_speed = 0.08 
+    def_sleep = 1 #default sleep time = 0
+    typing_speed = 0.08 #type speed in terminal
     lines = [
         ("I’ll always be in your corner", 1),
         ("Cause I don’t feel alive ‘til I’m \nburning on your back . . . . . . . burner", 6),
@@ -11,7 +12,7 @@ def run_liric():
     ]
 
     print("--- Backburner (NIKI) ---\n")
-    time.sleep(1) 
+    time.sleep(def_sleep) 
 
     for baris, delay in lines:
         
