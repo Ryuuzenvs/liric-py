@@ -4,19 +4,19 @@ import time
 def run_liric():
     # Global Config
     default_typing_speed = 0.08 #type speed in terminal
-    def_sleep = 0 #default sleep time = 0
+    def_sleep = 0.5 #default sleep time = 0
     
     # Format: (Liric, Delay row, Speed row)
     lines = [
-        ("No one's gotta know, just us and the moon", 0.1, 0.06), # fast
-        ("Till the sun starts waking", 0.8, 0.06),
+        ("No one's gotta know, just us and the moon", 0, 0.05), # fast
+        ("Till the sun starts waking", 0.5, 0.06),
         ("", 0.2, 0), #  null, delay row
-        ("Up's the only direction I see", 1.0, 0.15), # slow/Deep
-        ("As long as we keep this", 0.5, 0.15),
+        ("Up's the only direction I see", 2.7, 0.12), # slow/Deep
+        ("As long as we keep this", 0.5, 0.05),
         ("", 0.2, 0),
-        ("Low, low, low, low, low, low, low, lowkey", 0.5, 0.05), #fast+
-        ("(Ah-ah-ah-ah-ah, ah-ah-ah-ah-ah)", 0.8, 0.1),
-        ("You ain't even gotta lo-, lo-, lo-, lo-, lo-, lo-, lo-, love me", 1.0, 0.07),
+        ("Low, low, low, low, low, low, low, lowkey", 1, 0.08), #fast+
+        ("(Ah-ah-ah-ah-ah, Ah-ah, You ain't even gotta)", 0, 0.1),
+        ("lo-, lo-, lo-, lo-, lo-, lo-, lo-, love me", 1.0, 0.07),
     ]
 
     print("--- Lowkey (NIKI) - Terminal Version ---\n")
